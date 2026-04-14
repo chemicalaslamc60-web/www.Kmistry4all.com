@@ -1,2 +1,2 @@
 # www.Kmistry4all.com
-All Chemistry Things in  with notes, apps, experiments
+All Chemistry Things in One Place with notes, apps, experiments etc.
