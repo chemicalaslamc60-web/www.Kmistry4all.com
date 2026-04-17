@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kmistry4all — Free Chemistry Universe</title>
+<!-- ✅ ADSENSE: Replace ca-pub-XXXXXXXXXXXXXXXX with YOUR Publisher ID from adsense.google.com -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Space+Mono:wght@700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060d1a;--bg2:#0d1526;--bg3:#111d35;--cyan:#00e5ff;--gold:#ffd740;--green:#69ff47;--purple:#c77dff;--red:#ff5252;--text:#e8eeff;--dim:#7a8ab0;--border:rgba(0,229,255,0.15)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;min-height:100vh}
+a{color:var(--cyan);text-decoration:none}
+header{background:rgba(6,13,26,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 16px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
+.logo{font-family:'Exo 2',sans-serif;font-size:1.45rem;font-weight:900;color:var(--cyan);letter-spacing:-1px}.logo span{color:var(--gold)}
+.hdr-right{display:flex;gap:8px;align-items:center}
+#admin-badge{display:none;color:var(--purple);font-size:0.78rem;font-weight:700;background:rgba(199,125,255,0.1);padding:4px 10px;border-radius:6px}
+.admin-btn{background:rgba(199,125,255,0.1);border:1px solid rgba(199,125,255,0.3);color:var(--purple);padding:7px 13px;border-radius:6px;cursor:pointer;font-size:0.82rem;font-family:'Nunito',sans-serif;font-weight:700;transition:all .2s}
+.admin-btn:hover{background:rgba(199,125,255,0.2)}
+.tab-nav{display:flex;gap:3px;padding:8px 12px;background:var(--bg2);border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none}
+.tab-nav::-webkit-scrollbar{display:none}
+.tb{background:transparent;border:1px solid transparent;color:var(--dim);padding:7px 14px;border-radius:7px;cursor:pointer;font-family:'Exo 2',sans-serif;font-weight:700;font-size:0.83rem;white-space:nowrap;transition:all .2s}
+.tb:hover{color:var(--text);background:rgba(255,255,255,0.05)}
+.tb.active{background:rgba(0,229,255,0.1);border-color:var(--cyan);color:var(--cyan)}
+.ad-bar{background:var(--bg2);border-bottom:1px solid var(--border);padding:6px 16px;text-align:center;display:flex;align-items:center;justify-content:center;min-height:56px}
+.ad-ph{background:rgba(255,215,64,0.04);border:1px dashed rgba(255,215,64,0.3);border-radius:6px;padding:8px 16px;color:var(--gold);font-size:0.7rem;font-family:'Space Mono',monospace;width:100%;max-width:728px;text-align:center}
+main{max-width:1280px;margin:0 auto;padding:22px 14px}
+.tc{display:none}.tc.active{display:block}
+.grid{display:grid;gap:14px}
+.g3{grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}
+.g4{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.g2{grid-template-columns:repeat(auto-fill,minmax(420px,1fr))}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:11px;padding:18px;transition:all .25s;position:relative}
+.card:hover{border-color:rgba(0,229,255,0.35);transform:translateY(-2px)}
+.ctag{display:inline-block;font-size:0.62rem;font-family:'Space Mono',monospace;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:4px;margin-bottom:7px}
+.tf{background:rgba(105,255,71,0.1);color:var(--green);border:1px solid rgba(105,255,71,0.2)}
+.to{background:rgba(0,229,255,0.08);color:var(--cyan);border:1px solid rgba(0,229,255,0.2)}
+.tp{background:rgba(255,215,64,0.08);color:var(--gold);border:1px solid rgba(255,215,64,0.2)}
+.tn{background:rgba(255,82,82,0.08);color:var(--red);border:1px solid rgba(255,82,82,0.2)}
+.ct{font-family:'Exo 2',sans-serif;font-weight:700;font-size:.95rem;color:var(--text);margin-bottom:5px}
+.cs{font-size:.77rem;color:var(--dim);margin-bottom:6px}
+.cd{font-size:.82rem;color:var(--dim);line-height:1.5;margin-bottom:12px}
+.br{display:flex;gap:7px;flex-wrap:wrap}
+.btn{padding:7px 13px;border-radius:6px;font-size:.77rem;font-weight:700;text-decoration:none;cursor:pointer;border:none;font-family:'Nunito',sans-serif;transition:all .2s;display:inline-flex;align-items:center;gap:4px}
+.brd{background:rgba(0,229,255,0.1);color:var(--cyan);border:1px solid rgba(0,229,255,0.25)}.brd:hover{background:rgba(0,229,255,0.2)}
+.bdl{background:rgba(105,255,71,0.1);color:var(--green);border:1px solid rgba(105,255,71,0.2)}.bdl:hover{background:rgba(105,255,71,0.2)}
+.bdel{background:rgba(255,82,82,0.08);color:var(--red);border:1px solid rgba(255,82,82,0.2);font-size:.7rem;padding:5px 9px}.bdel:hover{background:rgba(255,82,82,0.2)}
+.badd{background:rgba(105,255,71,0.1);color:var(--green);border:1px solid rgba(105,255,71,0.2);padding:9px 18px;font-size:.85rem}.badd:hover{background:rgba(105,255,71,0.2)}
+.bpr{background:var(--cyan);color:#060d1a;padding:10px 22px;font-size:.9rem}.bpr:hover{opacity:.9}
+.vc{background:var(--bg2);border:1px solid var(--border);border-radius:11px;overflow:hidden;transition:all .25s;position:relative}
+.vc:hover{border-color:rgba(255,82,82,0.4);transform:translateY(-2px)}
+.vemb{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.vemb iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.vi{padding:13px 15px}
+.vt{font-family:'Exo 2',sans-serif;font-weight:700;font-size:.92rem;margin-bottom:4px}
+.vch{font-size:.72rem;color:var(--red);font-family:'Space Mono',monospace;margin-bottom:5px}
+.vd{font-size:.79rem;color:var(--dim);line-height:1.4}
+.sh{margin-bottom:22px}
+.sey{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:5px}
+.st{font-family:'Exo 2',sans-serif;font-size:1.75rem;font-weight:900;margin-bottom:7px}
+.sd{color:var(--dim);font-size:.88rem;max-width:580px}
+.ftabs{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap}
+.fb{background:var(--bg3);border:1px solid var(--border);color:var(--dim);padding:6px 13px;border-radius:6px;cursor:pointer;font-size:.78rem;font-family:'Nunito',sans-serif;font-weight:700;transition:all .2s}
+.fb.active{background:rgba(0,229,255,0.1);border-color:var(--cyan);color:var(--cyan)}
+.hero{background:linear-gradient(135deg,rgba(0,229,255,.05),rgba(199,125,255,.05));border:1px solid var(--border);border-radius:18px;padding:56px 36px;text-align:center;margin-bottom:36px}
+.ht{font-family:'Exo 2',sans-serif;font-size:clamp(2rem,6vw,3.8rem);font-weight:900;margin-bottom:14px;background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hs{color:var(--dim);font-size:1.05rem;margin-bottom:28px}
+.hstats{display:flex;gap:36px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.stn{font-family:'Space Mono',monospace;font-size:1.9rem;color:var(--cyan);display:block}
+.stl{font-size:.72rem;color:var(--dim);text-transform:uppercase;letter-spacing:1px}
+.hctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.mo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1000;align-items:center;justify-content:center}
+.mo.open{display:flex}
+.md{background:var(--bg2);border:1px solid var(--border);border-radius:15px;padding:28px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto}
+.mdt{font-family:'Exo 2',sans-serif;font-size:1.3rem;font-weight:900;margin-bottom:20px;color:var(--purple)}
+.fld{margin-bottom:14px}
+.fld label{display:block;font-size:.75rem;color:var(--dim);margin-bottom:5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.fld input,.fld select,.fld textarea{width:100%;background:var(--bg3);border:1px solid var(--border);color:var(--text);padding:9px 13px;border-radius:7px;font-family:'Nunito',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s}
+.fld input:focus,.fld select,.fld textarea:focus{border-color:var(--cyan)}
+.fld textarea{resize:vertical;min-height:75px}
+.mac{display:flex;gap:9px;margin-top:18px}
+.bcnl{background:rgba(255,255,255,.05);color:var(--dim);border:1px solid var(--border);padding:9px 18px;border-radius:7px;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:700}
+.ap{background:rgba(199,125,255,.04);border:1px solid rgba(199,125,255,.2);border-radius:10px;padding:13px 16px;margin-bottom:20px;display:none;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.ap.on{display:flex}
+.apl{font-size:.78rem;color:var(--purple);font-weight:700}
+.db{display:inline-block;font-size:.65rem;padding:2px 7px;border-radius:4px;font-weight:700;margin-right:3px}
+.de{background:rgba(105,255,71,.12);color:var(--green)}
+.dm{background:rgba(255,215,64,.12);color:var(--gold)}
+.dh{background:rgba(255,82,82,.12);color:var(--red)}
+.ad-in{background:rgba(255,215,64,.03);border:1px dashed rgba(255,215,64,.2);border-radius:7px;padding:10px;text-align:center;margin:16px 0;color:var(--gold);font-size:.68rem;font-family:'Space Mono',monospace}
+.notif{position:fixed;bottom:18px;right:18px;background:var(--bg2);border:1px solid var(--green);color:var(--green);padding:11px 18px;border-radius:9px;font-size:.82rem;font-weight:700;z-index:9999;transform:translateX(200px);transition:transform .3s}
+.notif.show{transform:translateX(0)}
+.vno-embed{background:var(--bg3);padding:28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
+.vno-embed span{font-size:2.5rem}
+@media(max-width:600px){.hero{padding:36px 18px}.g3,.g2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">⚗️ K<span>M</span>istry4all</div>
+  <div class="hdr-right">
+    <span id="admin-badge">🟣 Admin Mode</span>
+    <button class="admin-btn" id="admin-btn" onclick="toggleAdmin()">🔐 Admin</button>
+  </div>
+</header>
+
+<nav class="tab-nav">
+  <button class="tb active" onclick="gTab('home',this)">🏠 Home</button>
+  <button class="tb" onclick="gTab('books',this)">📘 Books</button>
+  <button class="tb" onclick="gTab('papers',this)">🔬 Research Papers</button>
+  <button class="tb" onclick="gTab('experiments',this)">⚗️ Experiments</button>
+  <button class="tb" onclick="gTab('apps',this)">📱 Apps</button>
+  <button class="tb" onclick="gTab('videos',this)">🎥 Video Lectures</button>
+  <button class="tb" onclick="gTab('contact',this)">📬 Contact</button>
+</nav>
+
+<!-- ✅ TOP ADSENSE BANNER — Replace slot ID below -->
+<div class="ad-bar">
+  <div class="ad-ph">📢 GOOGLE ADSENSE BANNER (728×90) — Replace this div with your AdSense code once approved</div>
+  <!-- UNCOMMENT & REPLACE after AdSense approval:
+  <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="YOUR_SLOT_ID"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  -->
+</div>
+
+<main>
+
+<!-- ══ HOME ══ -->
+<section id="tc-home" class="tc active">
+  <div class="hero">
+    <div class="ht">⚗️ Kmistry4all</div>
+    <p class="hs">Your complete free chemistry universe — books, research papers,<br>experiments, apps &amp; video lectures. 100% Free. Forever.</p>
+    <div class="hstats">
+      <div><span class="stn">25+</span><span class="stl">Free Books</span></div>
+      <div><span class="stn">18+</span><span class="stl">Research Portals</span></div>
+      <div><span class="stn">15+</span><span class="stl">Free Apps</span></div>
+      <div><span class="stn">18+</span><span class="stl">Experiments</span></div>
+    </div>
+    <div class="hctas">
+      <button class="btn bpr" onclick="gTab('books',document.querySelectorAll('.tb')[1])">📘 Explore Books</button>
+      <button class="btn brd" onclick="gTab('experiments',document.querySelectorAll('.tb')[3])">⚗️ Experiments</button>
+      <button class="btn brd" onclick="gTab('videos',document.querySelectorAll('.tb')[5])">🎥 Lectures</button>
+    </div>
+  </div>
+  <div class="grid g3">
+    <div class="card" onclick="gTab('books',document.querySelectorAll('.tb')[1])" style="cursor:pointer"><div style="font-size:2.2rem;margin-bottom:10px">📘</div><div class="ct">Free Chemistry Books</div><div class="cd">25+ open-access textbooks — NCERT, OpenStax, LibreTexts, MIT OCW covering all branches from Class 11 to university level.</div></div>
+    <div class="card" onclick="gTab('papers',document.querySelectorAll('.tb')[2])" style="cursor:pointer"><div style="font-size:2.2rem;margin-bottom:10px">🔬</div><div class="ct">Research Papers</div><div class="cd">18+ free portals — PubMed, ChemRxiv, arXiv, RSC Open, ACS, Google Scholar & more. Access thousands of peer-reviewed chemistry papers.</div></div>
+    <div class="card" onclick="gTab('experiments',document.querySelectorAll('.tb')[3])" style="cursor:pointer"><div style="font-size:2.2rem;margin-bottom:10px">⚗️</div><div class="ct">Video Experiments</div><div class="cd">18+ chemistry experiment videos embedded directly — watch elephant toothpaste, iodine clock, thermite, BZ reaction and more.</div></div>
+    <div class="card" onclick="gTab('apps',document.querySelectorAll('.tb')[4])" style="cursor:pointer"><div style="font-size:2.2rem;margin-bottom:10px">📱</div><div class="ct">Free Chemistry Apps</div><div class="cd">15+ best free apps — periodic table, molecular viewer, equation balancer, PhET simulations, PubChem, ChemSpider and more.</div></div>
+    <div class="card" onclick="gTab('videos',document.querySelectorAll('.tb')[5])" style="cursor:pointer"><div style="font-size:2.2rem;margin-bottom:10px">🎥</div><div class="ct">Video Lectures</div><div class="cd">Free university chemistry from MIT, NPTEL IIT, Khan Academy, CrashCourse, Professor Dave and more. Watch inside this page.</div></div>
+    <div class="card" onclick="gTab('contact',document.querySelectorAll('.tb')[6])" style="cursor:pointer"><div style="font-size:2.2rem;margin-bottom:10px">📬</div><div class="ct">Suggest Resources</div><div class="cd">Know a great free chemistry resource we've missed? Suggest books, papers, experiments, apps or videos here!</div></div>
+  </div>
+</section>
+
+<!-- ══ BOOKS ══ -->
+<section id="tc-books" class="tc">
+  <div class="sh">
+    <p class="sey">📘 Section 01</p>
+    <h2 class="st">Free Chemistry Books & PDFs</h2>
+    <p class="sd">All openly licensed and free — read online or download PDF. No login required.</p>
+  </div>
+  <div class="ap" id="ap-books"><span class="apl">🔐 Admin — Books Section</span><div><button class="btn badd" onclick="openAdd('book')">➕ Add Book</button></div></div>
+  <div class="ftabs" id="bf">
+    <button class="fb active" onclick="fBooks('all',this)">All</button>
+    <button class="fb" onclick="fBooks('general',this)">General</button>
+    <button class="fb" onclick="fBooks('organic',this)">Organic</button>
+    <button class="fb" onclick="fBooks('physical',this)">Physical</button>
+    <button class="fb" onclick="fBooks('inorganic',this)">Inorganic</button>
+    <button class="fb" onclick="fBooks('biochem',this)">Biochemistry</button>
+    <button class="fb" onclick="fBooks('ncert',this)">NCERT</button>
+    <button class="fb" onclick="fBooks('class11',this)">Class 11</button>
+    <button class="fb" onclick="fBooks('class12',this)">Class 12</button>
+  </div>
+  <div class="ad-in">📢 AD (336×280) — Replace with AdSense code after approval</div>
+  <div class="grid g3" id="books-grid"></div>
+</section>
+
+<!-- ══ PAPERS ══ -->
+<section id="tc-papers" class="tc">
+  <div class="sh">
+    <p class="sey">🔬 Section 02</p>
+    <h2 class="st">Free Chemistry Research Papers</h2>
+    <p class="sd">Peer-reviewed journals, open-access databases and preprint servers — all completely free to read.</p>
+  </div>
+  <div class="ap" id="ap-papers"><span class="apl">🔐 Admin — Research Papers</span><div><button class="btn badd" onclick="openAdd('paper')">➕ Add Portal</button></div></div>
+  <div class="ad-in">📢 AD (728×90) — Replace with AdSense code after approval</div>
+  <div class="grid g3" id="papers-grid"></div>
+</section>
+
+<!-- ══ EXPERIMENTS ══ -->
+<section id="tc-experiments" class="tc">
+  <div class="sh">
+    <p class="sey">⚗️ Section 03</p>
+    <h2 class="st">Chemistry Experiments — Video Projects</h2>
+    <p class="sd">Watch real chemistry experiments directly here! Beginner home projects to advanced lab demonstrations. All videos play inside this page.</p>
+  </div>
+  <div class="ap" id="ap-experiments"><span class="apl">🔐 Admin — Experiments</span><div><button class="btn badd" onclick="openAdd('experiment')">➕ Add Experiment Video</button></div></div>
+  <div class="ftabs" id="ef">
+    <button class="fb active" onclick="fExps('all',this)">All</button>
+    <button class="fb" onclick="fExps('beginner',this)">🟢 Beginner</button>
+    <button class="fb" onclick="fExps('intermediate',this)">🟡 Intermediate</button>
+    <button class="fb" onclick="fExps('advanced',this)">🔴 Advanced</button>
+  </div>
+  <div class="ad-in">📢 AD (300×250) — Replace with AdSense code after approval</div>
+  <div class="grid g2" id="exp-grid"></div>
+</section>
+
+<!-- ══ APPS ══ -->
+<section id="tc-apps" class="tc">
+  <div class="sh">
+    <p class="sey">📱 Section 04</p>
+    <h2 class="st">Free Chemistry Apps & Tools</h2>
+    <p class="sd">Best free mobile and web tools — periodic table, molecular viewers, simulators, calculators and databases.</p>
+  </div>
+  <div class="ap" id="ap-apps"><span class="apl">🔐 Admin — Apps</span><div><button class="btn badd" onclick="openAdd('app')">➕ Add App</button></div></div>
+  <div class="ad-in">📢 AD (336×280) — Replace with AdSense code after approval</div>
+  <div class="grid g3" id="apps-grid"></div>
+</section>
+
+<!-- ══ VIDEOS ══ -->
+<section id="tc-videos" class="tc">
+  <div class="sh">
+    <p class="sey">🎥 Section 05</p>
+    <h2 class="st">Free Video Lectures</h2>
+    <p class="sd">Complete chemistry courses from top universities and YouTube educators — watch directly here.</p>
+  </div>
+  <div class="ap" id="ap-videos"><span class="apl">🔐 Admin — Lectures</span><div><button class="btn badd" onclick="openAdd('video')">➕ Add Lecture</button></div></div>
+  <div class="ad-in">📢 AD (728×90) — Replace with AdSense code after approval</div>
+  <div class="grid g2" id="videos-grid"></div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="tc-contact" class="tc">
+  <div class="sh"><p class="sey">📬 Section 06</p><h2 class="st">Contact & Suggest Resources</h2><p class="sd">Found a great free chemistry resource? Suggest it! Or ask a chemistry question.</p></div>
+  <div style="max-width:540px">
+    <div class="card" style="margin-bottom:16px">
+      <div class="fld"><label>Your Name</label><input id="c-n" placeholder="Your name"></div>
+      <div class="fld"><label>Email</label><input type="email" id="c-e" placeholder="your@email.com"></div>
+      <div class="fld"><label>Message / Resource Suggestion</label><textarea id="c-m" placeholder="Suggest a book, paper, app, experiment video, or ask a chemistry question..."></textarea></div>
+      <button class="btn bpr" onclick="submitContact()">📤 Send</button>
+    </div>
+    <div class="card">
+      <div class="ct" style="margin-bottom:8px">⚗️ About Kmistry4all</div>
+      <div class="cd">Kmistry4all is a free chemistry resource hub for students, teachers, and enthusiasts everywhere. Our goal: make chemistry education accessible to all, regardless of location or budget. All resources link to openly available, free content.</div>
+      <div style="margin-top:12px"><a href="https://kmistry4all.wordpress.com" target="_blank" class="btn brd">🌐 Visit Our Blog</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer style="background:var(--bg2);border-top:1px solid var(--border);padding:26px 16px;text-align:center;margin-top:50px">
+  <div style="font-family:'Exo 2',sans-serif;font-size:1.3rem;font-weight:900;color:var(--cyan);margin-bottom:6px">⚗️ Kmistry4all</div>
+  <p style="color:var(--dim);font-size:.82rem">Free Chemistry Resources — Books • Papers • Experiments • Apps • Lectures</p>
+  <p style="color:var(--dim);font-size:.72rem;margin-top:8px">© 2025 Kmistry4all · All resources link to free publicly available content</p>
+</footer>
+
+<!-- ══ ADMIN LOGIN MODAL ══ -->
+<div class="mo" id="mo-login">
+  <div class="md">
+    <div class="mdt">🔐 Admin Login — Kmistry4all</div>
+    <div class="fld"><label>Username</label><input type="text" id="a-u" placeholder="Enter username" autocomplete="off"></div>
+    <div class="fld"><label>Password</label><input type="password" id="a-p" placeholder="Enter password" onkeydown="if(event.key==='Enter')doLogin()"></div>
+    <div id="lerr" style="color:var(--red);font-size:.8rem;margin-bottom:10px;display:none">❌ Invalid username or password.</div>
+    <div class="mac">
+      <button class="btn bpr" onclick="doLogin()">Login</button>
+      <button class="bcnl" onclick="closeM('mo-login')">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ADMIN PANEL MODAL ══ -->
+<div class="mo" id="mo-panel">
+  <div class="md" style="max-width:560px">
+    <div class="mdt">⚙️ Admin Panel — Kmistry4all</div>
+    <p style="color:var(--dim);font-size:.83rem;margin-bottom:18px">Logged in as <strong style="color:var(--cyan)" id="a-who"></strong>. Add/delete buttons are now visible on every section.</p>
+    <div style="background:var(--bg3);border-radius:9px;padding:14px;margin-bottom:16px">
+      <div style="font-size:.78rem;color:var(--gold);font-weight:700;margin-bottom:10px">🔑 Change Password</div>
+      <div class="fld"><label>New Password</label><input type="password" id="np" placeholder="New password"></div>
+      <div class="fld"><label>Confirm Password</label><input type="password" id="cp" placeholder="Confirm password"></div>
+      <button class="btn badd" style="margin-top:4px" onclick="chgPass()">Save Password</button>
+    </div>
+    <div style="background:rgba(255,215,64,.04);border:1px solid rgba(255,215,64,.2);border-radius:9px;padding:14px;margin-bottom:16px">
+      <div style="font-size:.78rem;color:var(--gold);font-weight:700;margin-bottom:8px">📢 Google AdSense Setup Instructions</div>
+      <p style="font-size:.78rem;color:var(--dim);line-height:1.65">1. Go to <strong style="color:var(--cyan)">adsense.google.com</strong> and sign in with your Google account.<br>2. Add your site URL and verify ownership.<br>3. Copy your <strong style="color:var(--cyan)">Publisher ID</strong> (e.g., ca-pub-1234567890).<br>4. In the HTML source, replace <code style="color:var(--cyan)">ca-pub-XXXXXXXXXXXXXXXX</code> with your ID.<br>5. Replace <code style="color:var(--cyan)">YOUR_SLOT_ID</code> in each ad unit with your ad slot number.<br>6. Uncomment the AdSense ins tags and remove the placeholder divs.</p>
+    </div>
+    <div class="mac">
+      <button class="btn bpr" onclick="closeM('mo-panel')">✅ Done — Go Edit</button>
+      <button class="bcnl" onclick="doLogout()">Logout</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ ADD CONTENT MODAL ══ -->
+<div class="mo" id="mo-add">
+  <div class="md">
+    <div class="mdt" id="add-title">➕ Add Content</div>
+    <div id="add-form"></div>
+    <div class="mac">
+      <button class="btn bpr" onclick="saveItem()">💾 Save</button>
+      <button class="bcnl" onclick="closeM('mo-add')">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="notif" id="notif"></div>
+
+<script>
+// ─── DEFAULT DATA ───────────────────────────────────────────────
+const DB = {
+  books:[
+    {id:'b1',title:'OpenStax Chemistry 2e',author:'Langley et al.',sub:'general',lvl:'Undergraduate',desc:'Complete peer-reviewed general chemistry — atomic structure, bonding, thermodynamics, equilibrium, electrochemistry. 21 chapters.',read:'https://openstax.org/books/chemistry-2e/pages/1-introduction',dl:'https://assets.openstax.org/oscms-prodcms/media/documents/Chemistry2e-OP_i6tAI7d.pdf',tag:'free'},
+    {id:'b2',title:'OpenStax Chemistry: Atoms First 2e',author:'Robinson et al.',sub:'general',lvl:'Undergraduate',desc:'Atoms-first approach starting from quantum mechanics. Perfect for honours chemistry courses aligned with ACS guidelines.',read:'https://openstax.org/books/chemistry-atoms-first-2e/pages/1-introduction',dl:'https://openstax.org/books/chemistry-atoms-first-2e/pages/1-introduction',tag:'free'},
+    {id:'b3',title:'OpenStax Organic Chemistry',author:'Morsch & Schaller',sub:'organic',lvl:'Undergraduate',desc:'Complete 2-semester organic chemistry textbook. Stereochemistry, reaction mechanisms, spectroscopy, and synthesis strategies.',read:'https://openstax.org/books/organic-chemistry/pages/1-introduction',dl:'https://openstax.org/books/organic-chemistry/pages/1-introduction',tag:'free'},
+    {id:'b4',title:'LibreTexts General Chemistry',author:'LibreTexts Team',sub:'general',lvl:'All Levels',desc:'Thousands of free chapters covering all of general chemistry with interactive elements, quizzes, and downloadable PDFs.',read:'https://chem.libretexts.org/Bookshelves/General_Chemistry',dl:'https://chem.libretexts.org',tag:'open'},
+    {id:'b5',title:'LibreTexts Organic Chemistry',author:'LibreTexts',sub:'organic',lvl:'Undergraduate',desc:'Comprehensive organic chemistry — functional groups, mechanisms, spectroscopy, and multi-step synthesis strategies.',read:'https://chem.libretexts.org/Bookshelves/Organic_Chemistry',dl:'https://chem.libretexts.org',tag:'open'},
+    {id:'b6',title:'LibreTexts Physical Chemistry',author:'LibreTexts',sub:'physical',lvl:'Undergraduate',desc:'Thermodynamics, quantum mechanics, spectroscopy, statistical mechanics, and chemical kinetics with full worked examples.',read:'https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps',dl:'https://chem.libretexts.org',tag:'open'},
+    {id:'b7',title:'LibreTexts Inorganic Chemistry',author:'LibreTexts',sub:'inorganic',lvl:'Undergraduate',desc:'Coordination chemistry, transition metals, organometallics, solid-state chemistry, and group theory.',read:'https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry',dl:'https://chem.libretexts.org',tag:'open'},
+    {id:'b8',title:'LibreTexts Biochemistry',author:'LibreTexts',sub:'biochem',lvl:'Undergraduate',desc:'Proteins, lipids, carbohydrates, nucleic acids, metabolism, enzyme kinetics, and biochemical techniques.',read:'https://chem.libretexts.org/Bookshelves/Biochemistry',dl:'https://chem.libretexts.org',tag:'open'},
+    {id:'b9',title:'NCERT Chemistry Class 11 — Part 1',author:'NCERT India',sub:'ncert',lvl:'class11',desc:'Some Basic Concepts, Structure of Atom, Classification of Elements, Chemical Bonding, States of Matter, Thermodynamics.',read:'https://ncert.nic.in/textbook/pdf/lech101.pdf',dl:'https://ncert.nic.in/textbook/pdf/lech101.pdf',tag:'ncert'},
+    {id:'b10',title:'NCERT Chemistry Class 11 — Part 2',author:'NCERT India',sub:'ncert',lvl:'class11',desc:'Equilibrium, Redox Reactions, Hydrogen, s-Block Elements, p-Block Elements, Organic Chemistry Basics, Environmental Chemistry.',read:'https://ncert.nic.in/textbook/pdf/lech201.pdf',dl:'https://ncert.nic.in/textbook/pdf/lech201.pdf',tag:'ncert'},
+    {id:'b11',title:'NCERT Chemistry Class 12 — Part 1',author:'NCERT India',sub:'ncert',lvl:'class12',desc:'Solid State, Solutions, Electrochemistry, Chemical Kinetics, Surface Chemistry, d/f Block Elements, Coordination Compounds.',read:'https://ncert.nic.in/textbook/pdf/lech301.pdf',dl:'https://ncert.nic.in/textbook/pdf/lech301.pdf',tag:'ncert'},
+    {id:'b12',title:'NCERT Chemistry Class 12 — Part 2',author:'NCERT India',sub:'ncert',lvl:'class12',desc:'Haloalkanes, Alcohols, Phenols, Ethers, Aldehydes/Ketones, Carboxylic Acids, Amines, Biomolecules, Polymers, Chemistry in Daily Life.',read:'https://ncert.nic.in/textbook/pdf/lech401.pdf',dl:'https://ncert.nic.in/textbook/pdf/lech401.pdf',tag:'ncert'},
+    {id:'b13',title:'CK-12 Chemistry (FlexBook)',author:'CK-12 Foundation',sub:'general',lvl:'High School',desc:'Adaptive free chemistry textbook with interactive simulations, quizzes, and videos. Ideal for high school students worldwide.',read:'https://www.ck12.org/book/ck-12-chemistry-concepts-intermediate/section/1.0/',dl:'https://www.ck12.org/chemistry/',tag:'open'},
+    {id:'b14',title:'Analytical Chemistry 2.1',author:'Harvey, DePauw University',sub:'general',lvl:'Undergraduate',desc:'Complete free analytical chemistry textbook — statistics, spectroscopy, chromatography, separations, and electroanalytical methods.',read:'https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)',dl:'https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Analytical_Chemistry_2.1_(Harvey)',tag:'open'},
+    {id:'b15',title:'Virtual Textbook of Organic Chemistry',author:'W. Reusch, Michigan State U.',sub:'organic',lvl:'Undergraduate',desc:'Classic comprehensive free organic chemistry reference. All major topics with reaction mechanisms and practice problems.',read:'https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/intro1.htm',dl:'https://www2.chemistry.msu.edu/faculty/reusch/virttxtjml/intro1.htm',tag:'free'},
+    {id:'b16',title:'MIT OCW 5.111 — General Chemistry Notes',author:'MIT OpenCourseWare',sub:'general',lvl:'University Year 1',desc:'Full MIT introductory chemistry course with lecture notes, problem sets, exams, and solutions. The gold standard.',read:'https://ocw.mit.edu/courses/5-111sc-principles-of-chemical-science-fall-2014/',dl:'https://ocw.mit.edu/courses/5-111sc-principles-of-chemical-science-fall-2014/',tag:'free'},
+    {id:'b17',title:'MIT OCW Inorganic Chemistry Notes',author:'MIT OpenCourseWare',sub:'inorganic',lvl:'Undergraduate',desc:'MIT\'s free inorganic chemistry course covering symmetry, group theory, coordination chemistry, and spectroscopy.',read:'https://ocw.mit.edu/courses/5-03-principles-of-inorganic-chemistry-i-fall-2005/',dl:'https://ocw.mit.edu/courses/5-03-principles-of-inorganic-chemistry-i-fall-2005/',tag:'free'},
+    {id:'b18',title:'ChemGuide (A-Level Chemistry)',author:'Jim Clark',sub:'general',lvl:'A-Level / AS',desc:'Clear notes especially strong for A-Level chemistry — organic mechanisms, physical chemistry, and inorganic. Very student-friendly.',read:'https://www.chemguide.co.uk',dl:'https://www.chemguide.co.uk',tag:'free'},
+    {id:'b19',title:'Project Gutenberg Chemistry',author:'Public Domain Classics',sub:'general',lvl:'Classic',desc:'Classic, public domain chemistry books by Lavoisier, Faraday, and other pioneers. Perfect for history of chemistry.',read:'https://www.gutenberg.org/ebooks/subject/35',dl:'https://www.gutenberg.org/ebooks/subject/35',tag:'free'},
+    {id:'b20',title:'Internet Archive Chemistry Collection',author:'Various',sub:'general',lvl:'All Levels',desc:'Thousands of scanned, digitized chemistry books including rare historical texts, old editions, and hard-to-find materials.',read:'https://archive.org/search?query=chemistry&mediatype=texts',dl:'https://archive.org/search?query=chemistry&mediatype=texts',tag:'free'},
+    {id:'b21',title:'OpenStax Biochemistry (Free for All)',author:'Tietz et al.',sub:'biochem',lvl:'Undergraduate',desc:'Full biochemistry textbook — metabolism, protein structure, enzyme kinetics, DNA replication, and cell signaling pathways.',read:'https://openstax.org/books/biochemistry-free-for-all/pages/1-1-overview-of-biochemistry',dl:'https://openstax.org/books/biochemistry-free-for-all/pages/1-1-overview-of-biochemistry',tag:'free'},
+    {id:'b22',title:'PDF Drive — Chemistry Collection',author:'Various Authors',sub:'general',lvl:'All Levels',desc:'Thousands of chemistry PDF textbooks searchable by topic. Browse and download organic, physical, analytical, and more.',read:'https://www.pdfdrive.com/chemistry-books.html',dl:'https://www.pdfdrive.com/chemistry-books.html',tag:'pdf'},
+    {id:'b23',title:'Introduction to Quantum Chemistry',author:'LibreTexts',sub:'physical',lvl:'Advanced',desc:'Wave functions, Schrödinger equation, molecular orbital theory, perturbation theory, and applications to atoms and molecules.',read:'https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Quantum_Chemistry_(Blinder)',dl:'https://chem.libretexts.org',tag:'open'},
+    {id:'b24',title:'RSC Learn Chemistry (A-Level & Undergraduate)',author:'Royal Society of Chemistry',sub:'general',lvl:'A-Level / Undergraduate',desc:'RSC\'s extensive free learning resources, worksheets, videos, and curriculum-aligned materials for students and teachers.',read:'https://www.rsc.org/learn-chemistry/',dl:'https://www.rsc.org/learn-chemistry/',tag:'open'},
+    {id:'b25',title:'NIST Chemistry WebBook',author:'NIST — US Govt.',sub:'general',lvl:'Reference',desc:'Official US government free chemistry reference data — thermodynamics, spectra, ion energetics, kinetics, fluid properties for thousands of compounds.',read:'https://webbook.nist.gov/chemistry/',dl:'https://webbook.nist.gov/chemistry/',tag:'free'},
+  ],
+  papers:[
+    {id:'p1',icon:'🏛️',title:'PubMed Central (PMC)',journal:'NIH',type:'Database',desc:'Free full-text archive of biomedical and life sciences journal literature. Millions of chemistry and biochemistry papers available. No login required.',url:'https://www.ncbi.nlm.nih.gov/pmc/'},
+    {id:'p2',icon:'🧪',title:'ChemRxiv — Chemistry Preprints',journal:'ACS / RSC / Wiley / DE GRUYTER',type:'Preprint Server',desc:'The chemistry preprint server. Find cutting-edge chemistry research before formal publication. Free access to all submitted preprints.',url:'https://chemrxiv.org'},
+    {id:'p3',icon:'⚛️',title:'arXiv — Chemical Physics & chem-ph',journal:'Cornell University',type:'Preprint',desc:'Free preprints in chemical physics, computational chemistry, and theoretical chemistry. Filter by chem-ph for chemistry-specific research.',url:'https://arxiv.org/list/physics.chem-ph/recent'},
+    {id:'p4',icon:'📖',title:'DOAJ — Chemistry Open Access Journals',journal:'DOAJ',type:'Directory',desc:'Directory of Open Access Journals — hundreds of fully free, peer-reviewed chemistry journals. Browse by subject area.',url:'https://doaj.org/search/journals?query=chemistry'},
+    {id:'p5',icon:'🏅',title:'RSC Open Access Papers',journal:'Royal Society of Chemistry',type:'Open Access',desc:'RSC\'s open access collection — Chemical Science, RSC Advances, and more. Many articles completely free to read and download.',url:'https://www.rsc.org/journals-books-databases/open-access/'},
+    {id:'p6',icon:'🔬',title:'ACS Publications — Open Access',journal:'American Chemical Society',type:'Open Access',desc:'ACS journal portal. Filter by "Open Access" to find completely free chemistry papers. Covers organic, inorganic, physical and analytical chemistry.',url:'https://pubs.acs.org'},
+    {id:'p7',icon:'🤖',title:'Semantic Scholar Chemistry',journal:'Allen AI',type:'AI-Powered Search',desc:'AI-powered free paper search. Automatically finds free PDF versions of chemistry papers. Search by topic, author, or compound.',url:'https://www.semanticscholar.org/search?q=chemistry&sort=Relevance'},
+    {id:'p8',icon:'🔍',title:'Google Scholar',journal:'Google',type:'Search Engine',desc:'Search all chemistry literature globally. Click "All versions" to find free PDFs. Filter by year for recent research.',url:'https://scholar.google.com'},
+    {id:'p9',icon:'🌐',title:'CORE.ac.uk',journal:'Open University / JISC',type:'Aggregator',desc:'Aggregates 200M+ open access research papers from repositories worldwide. Excellent for free chemistry research from universities.',url:'https://core.ac.uk'},
+    {id:'p10',icon:'📄',title:'Open Chemistry (De Gruyter)',journal:'De Gruyter',type:'Open Access Journal',desc:'Fully open access peer-reviewed journal covering all branches of chemistry. Free to read, download, cite, and share.',url:'https://www.degruyter.com/journal/key/chem/html'},
+    {id:'p11',icon:'💊',title:'PubChem Literature',journal:'NIH NLM',type:'Database',desc:'Access chemistry literature linked directly to specific compounds. Find all papers about a molecule, reaction, or chemical class.',url:'https://pubchem.ncbi.nlm.nih.gov'},
+    {id:'p12',icon:'🇪🇺',title:'Europe PMC',journal:'Europe PMC',type:'Repository',desc:'Free access to 40M+ research articles including chemistry and biochemistry. Many full-text PDFs freely available without registration.',url:'https://europepmc.org'},
+    {id:'p13',icon:'🔭',title:'Zenodo Chemistry Papers',journal:'CERN',type:'Repository',desc:'CERN\'s open repository. Search, upload, and download chemistry research data, papers, and datasets. Completely free with DOI.',url:'https://zenodo.org/search?q=chemistry&l=list'},
+    {id:'p14',icon:'👥',title:'ResearchGate Chemistry',journal:'ResearchGate',type:'Academic Network',desc:'Request free PDFs directly from authors. Message researchers for free copies of their papers. Most requests are fulfilled within days.',url:'https://www.researchgate.net/search?q=chemistry'},
+    {id:'p15',icon:'📰',title:'Wiley Open Chemistry',journal:'Wiley',type:'Open Access',desc:'Wiley\'s open access chemistry journal with free peer-reviewed articles on synthesis, structure, catalysis, and chemical biology.',url:'https://chemistry-europe.onlinelibrary.wiley.com/journal/23656549'},
+    {id:'p16',icon:'📚',title:'Springer Open Access — Chemistry',journal:'Springer Nature',type:'Open Access',desc:'Springer\'s open access collection. Filter chemistry articles by "Open Access" to find completely free papers across all sub-fields.',url:'https://www.springer.com/gp/open-access'},
+    {id:'p17',icon:'🎥',title:'Journal of Visualized Experiments (JoVE)',journal:'JoVE',type:'Video Journal',desc:'Chemistry experiments in video format with companion methods papers. Select "Open Access" for free content. Great for learning lab techniques.',url:'https://www.jove.com/science-education-library/chemistry'},
+    {id:'p18',icon:'🏢',title:'NIST WebBook — Reference Data',journal:'NIST, US Government',type:'Reference Database',desc:'National Institute of Standards free chemical reference data — thermodynamic constants, IR/UV/NMR spectra, kinetics, ion energetics.',url:'https://webbook.nist.gov/chemistry/'},
+  ],
+  experiments:[
+    {id:'e1',title:'🐘 Elephant Toothpaste',vid:'I2JfPdNGJMI',diff:'beginner',dur:'15 min',mat:'H₂O₂ 3%, Yeast, Dish soap, Warm water',desc:'Rapid decomposition of hydrogen peroxide using yeast as a catalyst creates a spectacular foam eruption. Demonstrates catalysis and decomposition reactions in the most visual way possible.'},
+    {id:'e2',title:'⏰ Iodine Clock Reaction',vid:'RJV_HBbOrUA',diff:'intermediate',dur:'30 min',mat:'KIO₃, Na₂S₂O₃, Starch, H₂SO₄',desc:'Two clear solutions are mixed and remain clear for several seconds, then instantly turn deep blue-black. One of the most dramatic demonstrations of reaction kinetics and rate laws.'},
+    {id:'e3',title:'🟣 Red Cabbage pH Indicator',vid:'bXECO7HSVX0',diff:'beginner',dur:'20 min',mat:'Red cabbage, Various household chemicals',desc:'Boil red cabbage and use the purple extract to test pH of household liquids. Watch it transform from pink (acids) to green (bases) to yellow (strong alkalis). Your own natural indicator!'},
+    {id:'e4',title:'💎 Growing Alum Crystals',vid:'9J-qNBN0eFw',diff:'beginner',dur:'2-3 days',mat:'Alum powder, Hot water, String, Glass jar',desc:'Grow beautiful faceted alum crystals over several days. Demonstrates supersaturation, nucleation sites, and crystal lattice formation. Each crystal grows into a perfect geometric shape.'},
+    {id:'e5',title:'🔥 Thermite Reaction (Demo)',vid:'5TjsAGKUBxM',diff:'advanced',dur:'Demo only',mat:'Fe₂O₃ + Al powder — DO NOT ATTEMPT — WATCH ONLY',desc:'Iron oxide and aluminum react in an extremely exothermic reaction producing molten iron. One of the most energetic chemical reactions in chemistry. Advanced supervised demonstration only.'},
+    {id:'e6',title:'💥 Sodium Metal in Water',vid:'HvvkHBCZNmg',diff:'advanced',dur:'Demo only',mat:'Sodium metal, Water — WATCH ONLY',desc:'Sodium reacts violently with water producing hydrogen gas and NaOH. A spectacular demonstration of Group 1 alkali metal reactivity. Never attempt without trained supervision.'},
+    {id:'e7',title:'🚀 Baking Soda & Vinegar Rocket',vid:'1O0AHH2DV8A',diff:'beginner',dur:'15 min',mat:'Film canister, Baking soda, Vinegar',desc:'Classic acid-base neutralization reaction used to launch a film canister rocket. Demonstrates gas pressure, CO₂ production, and Newton\'s third law of motion.'},
+    {id:'e8',title:'🌈 Flame Test — Metal Ion Colors',vid:'gPo7qs1eEpE',diff:'intermediate',dur:'45 min',mat:'Metal salts (NaCl, CuSO₄, KCl, LiCl), Nichrome wire, Bunsen burner',desc:'Different metal salts produce brilliant colored flames — Na (yellow), Cu (green), K (lilac), Li (crimson red). Demonstrates atomic emission spectroscopy and electron excitation.'},
+    {id:'e9',title:'✨ Glow Stick Chemistry',vid:'2kgDaA7XFu8',diff:'beginner',dur:'10 min',mat:'Glow sticks, Warm and cold water, Scissors',desc:'Explore chemiluminescence — the chemistry behind glow sticks. Hydrogen peroxide reacts with diphenyl oxalate producing light energy instead of heat. Pure photon chemistry!'},
+    {id:'e10',title:'🔌 Copper Electroplating',vid:'wCxmdtExRDU',diff:'intermediate',dur:'1 hour',mat:'CuSO₄ solution, 9V battery, Copper electrodes, Object to plate',desc:'Use electrolysis to coat objects with a layer of copper. Demonstrates redox reactions, Faraday\'s laws of electrolysis, and how industrial electroplating works.'},
+    {id:'e11',title:'🌊 Belousov-Zhabotinsky Reaction',vid:'IBa4kgXI4Cg',diff:'advanced',dur:'45 min',mat:'Malonic acid, KBrO₃, Ce₂(SO₄)₃, H₂SO₄ — Lab required',desc:'A solution spontaneously oscillates between colors without external input. One of the most beautiful examples of non-equilibrium chemical thermodynamics and self-organizing systems.'},
+    {id:'e12',title:'🧴 Making Soap (Saponification)',vid:'Zl-HfBLyCts',diff:'intermediate',dur:'2 hours',mat:'Vegetable oil, NaOH (lye), Water — Adult supervision required',desc:'Cold-process soap making via saponification. NaOH reacts with fatty acids in oil to produce soap and glycerol. Classic wearable chemistry you can actually use!'},
+    {id:'e13',title:'🔵 Oobleck — Non-Newtonian Fluid',vid:'f2XQ97XHjVw',diff:'beginner',dur:'10 min',mat:'Cornstarch, Water (2:1 ratio)',desc:'Cornstarch and water create a non-Newtonian fluid — solid under pressure, liquid at rest. Demonstrates dilatant fluid behavior, polymer chains, and complex fluid mechanics.'},
+    {id:'e14',title:'🍶 Yeast Fermentation & CO₂',vid:'6B-ZBiVhPvw',diff:'intermediate',dur:'24 hours',mat:'Yeast, Sugar, Water, Balloon, Bottle',desc:'Watch yeast ferment sugar to produce CO₂ gas. Measure gas production at different temperatures to explore enzyme kinetics, activation energy, and the Arrhenius equation.'},
+    {id:'e15',title:'🌈 7-Layer Density Column',vid:'KMoNKSB_9vg',diff:'beginner',dur:'20 min',mat:'Honey, Corn syrup, Dish soap, Water, Oil, Rubbing alcohol, Tall glass',desc:'Layer 7 liquids of different densities to create a permanent rainbow column. Demonstrates density, polarity, miscibility, and intermolecular forces visually.'},
+    {id:'e16',title:'🧵 Making Nylon — Polymer Synthesis',vid:'tSJFYAT39F8',diff:'advanced',dur:'30 min',mat:'Hexanedioyl dichloride, 1,6-diaminohexane, NaOH — Lab required',desc:'Nylon forms at the interface of two solutions and can be pulled out as a continuous fiber. Spectacular interfacial polymerization demonstrating condensation polymer chemistry.'},
+    {id:'e17',title:'🎨 Paper Chromatography',vid:'vGDpCHVF3Tc',diff:'beginner',dur:'1 hour',mat:'Coffee filter paper, Markers/inks, Solvents, Pencil',desc:'Separate ink and leaf pigments using paper chromatography. Learn about Rf values, polarity, and how forensic chemists identify unknown substances in crime labs.'},
+    {id:'e18',title:'🔮 Crystal Radio Transmitter Chemistry',vid:'UWalKXpHQE4',diff:'beginner',dur:'2 days',mat:'Various soluble salts, Hot water, Glass containers',desc:'Compare crystal shapes from alum, borax, table salt, and copper sulfate. Each salt grows a completely different crystal geometry — demonstrating crystal lattice structures.'},
+  ],
+  apps:[
+    {id:'a1',name:'PTable — Periodic Table',icon:'⚛️',plat:'Web & iOS & Android',badge:'FREE',desc:'The most comprehensive interactive periodic table. Element properties, electron configurations, isotopes, orbital diagrams, and history all in one beautiful tool.',url:'https://ptable.com'},
+    {id:'a2',name:'Khan Academy Chemistry',icon:'🎓',plat:'Web & iOS & Android',badge:'FREE',desc:'Complete free chemistry courses from atomic structure to organic chemistry. Personalized learning, video lessons, exercises, and progress tracking.',url:'https://www.khanacademy.org/science/chemistry'},
+    {id:'a3',name:'PhET Interactive Simulations',icon:'🎮',plat:'Web & Android',badge:'FREE',desc:'Research-based chemistry simulations from CU Boulder — atomic interactions, acid-base, reactions, balancing equations, concentration, and molecular polarity.',url:'https://phet.colorado.edu/en/simulations/filter?subjects=chemistry'},
+    {id:'a4',name:'ChemSpider',icon:'🗄️',plat:'Web',badge:'FREE',desc:'Royal Society of Chemistry\'s free chemical structure database. Search by name, formula, or draw a structure to access properties, spectra, and literature.',url:'https://www.chemspider.com'},
+    {id:'a5',name:'PubChem',icon:'💊',plat:'Web',badge:'FREE',desc:'NIH\'s open chemistry database with 100M+ compounds — structures, properties, bioactivities, spectra, patents, and literature. Enormous free reference.',url:'https://pubchem.ncbi.nlm.nih.gov'},
+    {id:'a6',name:'MolView — 3D Molecule Viewer',icon:'🧊',plat:'Web (any browser)',badge:'FREE',desc:'Draw 2D chemical structures that instantly convert to beautiful interactive 3D models. No installation needed — works on any device.',url:'https://molview.org'},
+    {id:'a7',name:'Chemix — Lab Diagram Maker',icon:'🖼️',plat:'Web',badge:'FREE',desc:'Design professional chemistry lab setup diagrams online. Perfect for lab reports, presentations, and teaching materials. 100% browser-based.',url:'https://chemix.org'},
+    {id:'a8',name:'NIST WebBook',icon:'🏢',plat:'Web',badge:'FREE',desc:'US government free chemical reference data — thermodynamic constants, IR/UV/NMR/MS spectra, ion energetics, kinetics, and fluid properties for thousands of compounds.',url:'https://webbook.nist.gov/chemistry/'},
+    {id:'a9',name:'WebMO — Molecular Modeling',icon:'🔮',plat:'Web',badge:'FREE DEMO',desc:'Free web-based molecular modeling. Build 3D molecules, run semi-empirical quantum calculations, visualize molecular orbitals and charge distributions.',url:'https://www.webmo.net/demo/WebMO_Demo.html'},
+    {id:'a10',name:'Chemical Equation Balancer',icon:'⚖️',plat:'Web',badge:'FREE',desc:'Instantly balance any chemical equation with step-by-step algebraic solutions. Also calculates molar masses, reaction stoichiometry, and limiting reagents.',url:'https://www.webqc.org/balance.php'},
+    {id:'a11',name:'Chemexper Chemical Directory',icon:'📋',plat:'Web',badge:'FREE',desc:'Free database of 230,000+ chemicals with MSDS safety sheets, molecular structures, physical properties, and supplier information.',url:'https://www.chemexper.com'},
+    {id:'a12',name:'OmniCalculator Chemistry',icon:'🔢',plat:'Web',badge:'FREE',desc:'Comprehensive chemistry calculators — molar mass, stoichiometry, molarity, gas laws, pH, thermodynamics, and equilibrium constants.',url:'https://www.omnicalculator.com/chemistry'},
+    {id:'a13',name:'Avogadro — Molecular Editor',icon:'🔄',plat:'Windows/Mac/Linux',badge:'OPEN SOURCE',desc:'Free advanced molecular editor. Design molecules, optimize geometry, view molecular orbitals. Professional-grade open-source tool used by researchers.',url:'https://avogadro.cc'},
+    {id:'a14',name:'RSC Learn Chemistry',icon:'🏅',plat:'Web',badge:'FREE',desc:'Royal Society of Chemistry\'s free learning platform — interactive periodic table, chemistry animations, lesson plans, and student worksheets.',url:'https://www.rsc.org/learn-chemistry/'},
+    {id:'a15',name:'Chemist Virtual Lab (Android)',icon:'🔭',plat:'Android & iOS',badge:'FREE',desc:'Virtual chemistry lab on your phone — mix chemicals, simulate reactions, explore lab equipment without any physical materials.',url:'https://play.google.com/store/apps/details?id=com.telesoftware.chemist'},
+  ],
+  videos:[
+    {id:'v1',title:'CrashCourse Chemistry — Complete 46-Episode Series',ch:'CrashCourse',desc:'All of general chemistry in 46 fast, fun, animated episodes — atomic structure to nuclear chemistry. Used by millions of students worldwide. Watch the full playlist here.',vid:'videoseries?list=PL8dPuuaLjXtPHzzYuWy6fYEaX9mQQ8oGr',playlist:true,url:null},
+    {id:'v2',title:'MIT 5.111 — Principles of Chemical Science (Full Course)',ch:'MIT OpenCourseWare',desc:'Complete MIT undergraduate chemistry course — all 36 lecture videos by actual MIT professors, plus free problem sets, exams, and solutions. The gold standard of free chemistry education.',vid:null,playlist:false,url:'https://ocw.mit.edu/courses/5-111sc-principles-of-chemical-science-fall-2014/'},
+    {id:'v3',title:'General & AP Chemistry — Khan Academy',ch:'Khan Academy',desc:'Complete Khan Academy general chemistry and AP Chemistry playlist. Self-paced, with practice exercises. Covers everything from atomic structure to electrochemistry.',vid:'videoseries?list=PLSQl0a2vh4HCLqA-rhMi_Z_WnBkD3wUka',playlist:true,url:null},
+    {id:'v4',title:'Organic Chemistry Full Course — Professor Dave',ch:'Professor Dave Explains',desc:'Clear comprehensive organic chemistry from functional groups through synthesis. Patient whiteboard-style teaching with plenty of worked reaction mechanism examples.',vid:'videoseries?list=PLybg94GvOJ9E9BcCODbTNw2xU4b7p45op',playlist:true,url:null},
+    {id:'v5',title:'Stoichiometry & Problem Solving',ch:'The Organic Chemistry Tutor',desc:'Thousands of solved chemistry problems. The best YouTube channel for drilling stoichiometry, equilibrium, kinetics, and thermodynamics problems for exam prep.',vid:'mAMIgrTl19U',playlist:false,url:null},
+    {id:'v6',title:'NPTEL Chemistry Lectures — IIT Professors',ch:'NPTEL India',desc:'Free university-level chemistry lectures by India\'s top IIT professors. Essential for JEE Advanced, NEET, and university exam preparation.',vid:null,playlist:false,url:'https://nptel.ac.in/courses/104/101/104101004/'},
+    {id:'v7',title:'NileRed — Advanced Chemistry Synthesis',ch:'NileRed',desc:'High production-value chemistry synthesis videos. Turns ordinary materials into extraordinary chemicals. Beautiful filmmaking meets serious chemistry.',vid:'ZBGKFsHJhRQ',playlist:false,url:null},
+    {id:'v8',title:'Periodic Videos — All 118 Elements',ch:'Periodic Videos, University of Nottingham',desc:'A short video about every element in the periodic table made by University of Nottingham chemists. Engaging, informative, and endlessly fascinating.',vid:'videoseries?list=PL7A1F4051E42B7D5B',playlist:true,url:null},
+    {id:'v9',title:'AP Chemistry Complete Review',ch:'Bozeman Science',desc:'Complete AP Chemistry topic review videos covering all College Board exam topics. Clear explanations with visual models. Essential for AP exam prep.',vid:'videoseries?list=PLllVwaZQkS2rxqMXTH-CDRefqUAm5FkGK',playlist:true,url:null},
+    {id:'v10',title:'Physical Chemistry — LibreTexts Video Series',ch:'LibreTexts',desc:'Video walkthroughs for physical chemistry — thermodynamics, quantum mechanics, kinetics, and spectroscopy with solved examples.',vid:'videoseries?list=PLrUX19kzC7nKBFIWCWCjOCj9jkj4qIGmq',playlist:true,url:null},
+  ]
+};
+
+// ─── STATE ───────────────────────────────────────────────────────
+let S={
+  admin:false, user:'admin', pass:'Kmistry@2024',
+  books:[...DB.books], papers:[...DB.papers],
+  experiments:[...DB.experiments], apps:[...DB.apps], videos:[...DB.videos],
+  bFilter:'all', eFilter:'all', addType:''
+};
+
+// ─── STORAGE ─────────────────────────────────────────────────────
+async function save(k,v){try{await window.storage.set(k,JSON.stringify(v))}catch(e){}}
+async function load(k){try{const r=await window.storage.get(k);return r?JSON.parse(r.value):null}catch(e){return null}}
+
+async function init(){
+  const keys=['books','papers','experiments','apps','videos'];
+  for(const k of keys){const d=await load('km-'+k);if(d&&d.length)S[k]=d;}
+  const creds=await load('km-creds');
+  if(creds){S.user=creds.user;S.pass=creds.pass;}
+  renderAll();
+}
+
+// ─── RENDER ──────────────────────────────────────────────────────
+function renderAll(){renderBooks();renderPapers();renderExps();renderApps();renderVids();}
+
+function delBtn(type,id){
+  return S.admin?`<button class="btn bdel" style="position:absolute;top:10px;right:10px" onclick="delItem('${type}','${id}')">🗑️ Delete</button>`:'';
+}
+
+function renderBooks(){
+  const f=S.bFilter;
+  const list=f==='all'?S.books:S.books.filter(b=>b.sub===f||b.lvl===f);
+  document.getElementById('books-grid').innerHTML=list.map(b=>`
+  <div class="card"><span class="ctag t${b.tag[0]}">${b.tag.toUpperCase()}</span>${delBtn('book',b.id)}
+    <div class="ct">${b.title}</div>
+    <div class="cs">✍️ ${b.author} &nbsp;|&nbsp; 🎓 ${b.lvl}</div>
+    <div class="cd">${b.desc}</div>
+    <div class="br"><a href="${b.read}" target="_blank" class="btn brd">📖 Read Free</a><a href="${b.dl}" target="_blank" class="btn bdl">⬇️ Download PDF</a></div>
+  </div>`).join('');
+}
+
+function renderPapers(){
+  document.getElementById('papers-grid').innerHTML=S.papers.map(p=>`
+  <div class="card">${delBtn('paper',p.id)}
+    <div style="font-size:1.9rem;margin-bottom:7px">${p.icon}</div>
+    <span class="ctag to">${p.type}</span>
+    <div class="ct">${p.title}</div>
+    <div class="cs">📰 ${p.journal}</div>
+    <div class="cd">${p.desc}</div>
+    <div class="br"><a href="${p.url}" target="_blank" class="btn brd">🔍 Access Free</a></div>
+  </div>`).join('');
+}
+
+function renderExps(){
+  const f=S.eFilter;
+  const list=f==='all'?S.experiments:S.experiments.filter(e=>e.diff===f);
+  document.getElementById('exp-grid').innerHTML=list.map(e=>`
+  <div class="vc">${delBtn('experiment',e.id)}
+    <div class="vemb"><iframe src="https://www.youtube.com/embed/${e.vid}?rel=0" loading="lazy" allowfullscreen title="${e.title}"></iframe></div>
+    <div class="vi">
+      <div class="vch">⚗️ Chemistry Experiment</div>
+      <div class="vt">${e.title}</div>
+      <span class="db ${e.diff==='beginner'?'de':e.diff==='intermediate'?'dm':'dh'}">${e.diff}</span>
+      <span class="db de">⏱ ${e.dur}</span>
+      <div class="vd" style="margin-top:7px">${e.desc}</div>
+      <div style="margin-top:7px;font-size:.73rem;color:var(--gold)">🧪 Materials: ${e.mat}</div>
+    </div>
+  </div>`).join('');
+}
+
+function renderApps(){
+  document.getElementById('apps-grid').innerHTML=S.apps.map(a=>`
+  <div class="card">${delBtn('app',a.id)}
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:9px">
+      <span style="font-size:1.9rem">${a.icon}</span>
+      <div><div class="ct" style="margin-bottom:2px">${a.name}</div><span class="ctag tf">${a.badge}</span></div>
+    </div>
+    <div class="cs">📱 ${a.plat}</div>
+    <div class="cd">${a.desc}</div>
+    <a href="${a.url}" target="_blank" class="btn brd">🚀 Open App</a>
+  </div>`).join('');
+}
+
+function renderVids(){
+  document.getElementById('videos-grid').innerHTML=S.videos.map(v=>{
+    const src=v.vid?`https://www.youtube.com/embed/${v.vid}${v.vid.includes('?')?'&':'?'}rel=0`:null;
+    const media=src
+      ?`<div class="vemb"><iframe src="${src}" loading="lazy" allowfullscreen title="${v.title}"></iframe></div>`
+      :`<div class="vno-embed"><span>🎥</span><div class="vt">${v.title}</div><a href="${v.url}" target="_blank" class="btn bpr">▶️ Open Free Course</a></div>`;
+    return `<div class="vc">${delBtn('video',v.id)}${media}
+    <div class="vi"><div class="vch">📺 ${v.ch}</div><div class="vt">${v.title}</div><div class="vd">${v.desc}</div></div>
+    </div>`;
+  }).join('');
+}
+
+// ─── TABS ────────────────────────────────────────────────────────
+function gTab(t,btn){
+  document.querySelectorAll('.tc').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tc-'+t).classList.add('active');
+  if(btn)btn.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ─── FILTERS ─────────────────────────────────────────────────────
+function fBooks(f,btn){
+  S.bFilter=f;
+  document.querySelectorAll('#bf .fb').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderBooks();
+}
+function fExps(f,btn){
+  S.eFilter=f;
+  document.querySelectorAll('#ef .fb').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderExps();
+}
+
+// ─── ADMIN AUTH ───────────────────────────────────────────────────
+function toggleAdmin(){
+  if(S.admin){document.getElementById('mo-panel').classList.add('open');}
+  else{document.getElementById('mo-login').classList.add('open');document.getElementById('lerr').style.display='none';document.getElementById('a-u').value='';document.getElementById('a-p').value='';}
+}
+function doLogin(){
+  const u=document.getElementById('a-u').value.trim();
+  const p=document.getElementById('a-p').value;
+  if(u===S.user&&p===S.pass){
+    S.admin=true;
+    closeM('mo-login');
+    document.getElementById('mo-panel').classList.add('open');
+    document.getElementById('admin-badge').style.display='inline';
+    document.getElementById('a-who').textContent=S.user;
+    document.getElementById('admin-btn').textContent='⚙️ Admin';
+    ['books','papers','experiments','apps','videos'].forEach(k=>document.getElementById('ap-'+k).classList.add('on'));
+    renderAll();
+  }else{document.getElementById('lerr').style.display='block';}
+}
+function doLogout(){
+  S.admin=false;
+  closeM('mo-panel');
+  document.getElementById('admin-badge').style.display='none';
+  document.getElementById('admin-btn').textContent='🔐 Admin';
+  ['books','papers','experiments','apps','videos'].forEach(k=>document.getElementById('ap-'+k).classList.remove('on'));
+  renderAll();
+}
+async function chgPass(){
+  const np=document.getElementById('np').value;
+  const cp=document.getElementById('cp').value;
+  if(!np){notif('❌ Password cannot be empty');return;}
+  if(np!==cp){notif('❌ Passwords do not match');return;}
+  S.pass=np;
+  await save('km-creds',{user:S.user,pass:S.pass});
+  notif('✅ Password updated!');
+  document.getElementById('np').value='';
+  document.getElementById('cp').value='';
+}
+
+// ─── ADD FORMS ────────────────────────────────────────────────────
+const FORMS={
+  book:`<div class="fld"><label>Title</label><input id="ft" placeholder="Book title"></div>
+<div class="fld"><label>Author</label><input id="fa" placeholder="Author(s)"></div>
+<div class="fld"><label>Subject</label><select id="fs"><option value="general">General Chemistry</option><option value="organic">Organic</option><option value="physical">Physical</option><option value="inorganic">Inorganic</option><option value="biochem">Biochemistry</option><option value="ncert">NCERT</option></select></div>
+<div class="fld"><label>Level</label><input id="fl" placeholder="e.g., Undergraduate, Class 11"></div>
+<div class="fld"><label>Description</label><textarea id="fd" placeholder="Brief description"></textarea></div>
+<div class="fld"><label>Read/View URL</label><input id="fr" placeholder="https://..."></div>
+<div class="fld"><label>Download PDF URL</label><input id="fdl" placeholder="https://... (PDF link)"></div>
+<div class="fld"><label>Tag</label><select id="ftag"><option value="free">FREE</option><option value="open">OPEN ACCESS</option><option value="pdf">PDF</option><option value="ncert">NCERT</option></select></div>`,
+  paper:`<div class="fld"><label>Portal / Journal Name</label><input id="ft" placeholder="e.g., PubMed Central"></div>
+<div class="fld"><label>Organization</label><input id="fj" placeholder="e.g., NIH"></div>
+<div class="fld"><label>Type</label><input id="ftype" placeholder="e.g., Database, Open Access, Preprint"></div>
+<div class="fld"><label>Icon (emoji)</label><input id="fi" placeholder="🔬"></div>
+<div class="fld"><label>Description</label><textarea id="fd" placeholder="What this portal provides"></textarea></div>
+<div class="fld"><label>URL</label><input id="fu" placeholder="https://..."></div>`,
+  experiment:`<div class="fld"><label>Experiment Title</label><input id="ft" placeholder="e.g., Iodine Clock Reaction"></div>
+<div class="fld"><label>YouTube Video ID</label><input id="fv" placeholder="e.g., RJV_HBbOrUA — from youtube.com/watch?v=XXXXXX"></div>
+<div class="fld"><label>Difficulty</label><select id="fd2"><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></div>
+<div class="fld"><label>Duration</label><input id="fdu" placeholder="e.g., 30 min"></div>
+<div class="fld"><label>Materials</label><input id="fm" placeholder="List key materials needed"></div>
+<div class="fld"><label>Description</label><textarea id="fd" placeholder="What happens and what chemistry it demonstrates"></textarea></div>`,
+  app:`<div class="fld"><label>App Name</label><input id="fn" placeholder="e.g., MolView"></div>
+<div class="fld"><label>Icon (emoji)</label><input id="fi" placeholder="🔮"></div>
+<div class="fld"><label>Platform</label><input id="fp" placeholder="e.g., Web & Android & iOS"></div>
+<div class="fld"><label>Badge</label><input id="fb2" placeholder="e.g., FREE, OPEN SOURCE"></div>
+<div class="fld"><label>Description</label><textarea id="fd" placeholder="What this app does"></textarea></div>
+<div class="fld"><label>URL</label><input id="fu" placeholder="https://..."></div>`,
+  video:`<div class="fld"><label>Video / Course Title</label><input id="ft" placeholder="e.g., CrashCourse Chemistry"></div>
+<div class="fld"><label>Channel Name</label><input id="fch" placeholder="e.g., CrashCourse"></div>
+<div class="fld"><label>YouTube Video ID</label><input id="fv" placeholder="e.g., ABC123xyz OR videoseries?list=PLxxx for playlists"></div>
+<div class="fld"><label>Is Playlist?</label><select id="fpl"><option value="false">Single Video</option><option value="true">Playlist</option></select></div>
+<div class="fld"><label>External URL (leave blank if YouTube embed above)</label><input id="fu" placeholder="https://... (for MIT OCW, NPTEL etc.)"></div>
+<div class="fld"><label>Description</label><textarea id="fd" placeholder="What this course covers"></textarea></div>`
+};
+
+function openAdd(type){
+  S.addType=type;
+  const titles={book:'📘 Add Free Book',paper:'🔬 Add Research Portal',experiment:'⚗️ Add Experiment Video',app:'📱 Add Chemistry App',video:'🎥 Add Video Lecture'};
+  document.getElementById('add-title').textContent=titles[type];
+  document.getElementById('add-form').innerHTML=FORMS[type];
+  document.getElementById('mo-add').classList.add('open');
+}
+
+function g(id){const el=document.getElementById(id);return el?el.value.trim():'';}
+
+async function saveItem(){
+  const id='i'+Date.now();
+  let item;
+  if(S.addType==='book'){
+    item={id,title:g('ft'),author:g('fa'),sub:g('fs'),lvl:g('fl'),desc:g('fd'),read:g('fr'),dl:g('fdl'),tag:g('ftag')};
+    if(!item.title||!item.read){notif('❌ Title and URL required');return;}
+    S.books.push(item);await save('km-books',S.books);renderBooks();
+  }else if(S.addType==='paper'){
+    item={id,title:g('ft'),journal:g('fj'),type:g('ftype'),icon:g('fi')||'🔬',desc:g('fd'),url:g('fu')};
+    if(!item.title||!item.url){notif('❌ Title and URL required');return;}
+    S.papers.push(item);await save('km-papers',S.papers);renderPapers();
+  }else if(S.addType==='experiment'){
+    item={id,title:g('ft'),vid:g('fv'),diff:g('fd2'),dur:g('fdu'),mat:g('fm'),desc:g('fd')};
+    if(!item.title||!item.vid){notif('❌ Title and Video ID required');return;}
+    S.experiments.push(item);await save('km-exps',S.experiments);renderExps();
+  }else if(S.addType==='app'){
+    item={id,name:g('fn'),icon:g('fi')||'📱',plat:g('fp'),badge:g('fb2')||'FREE',desc:g('fd'),url:g('fu')};
+    if(!item.name||!item.url){notif('❌ Name and URL required');return;}
+    S.apps.push(item);await save('km-apps',S.apps);renderApps();
+  }else if(S.addType==='video'){
+    const hasUrl=g('fu');
+    item={id,title:g('ft'),ch:g('fch'),vid:g('fv')||null,playlist:g('fpl')==='true',url:hasUrl||null,desc:g('fd')};
+    if(!item.title){notif('❌ Title required');return;}
+    S.videos.push(item);await save('km-videos',S.videos);renderVids();
+  }
+  closeM('mo-add');
+  notif('✅ Added successfully!');
+}
+
+async function delItem(type,id){
+  if(!confirm('Delete this item? This cannot be undone.'))return;
+  if(type==='book'){S.books=S.books.filter(b=>b.id!==id);await save('km-books',S.books);renderBooks();}
+  else if(type==='paper'){S.papers=S.papers.filter(p=>p.id!==id);await save('km-papers',S.papers);renderPapers();}
+  else if(type==='experiment'){S.experiments=S.experiments.filter(e=>e.id!==id);await save('km-exps',S.experiments);renderExps();}
+  else if(type==='app'){S.apps=S.apps.filter(a=>a.id!==id);await save('km-apps',S.apps);renderApps();}
+  else if(type==='video'){S.videos=S.videos.filter(v=>v.id!==id);await save('km-videos',S.videos);renderVids();}
+  notif('🗑️ Deleted!');
+}
+
+// ─── UTILS ───────────────────────────────────────────────────────
+function closeM(id){document.getElementById(id).classList.remove('open');}
+document.querySelectorAll('.mo').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.mo.open').forEach(m=>m.classList.remove('open'));});
+
+function notif(msg){
+  const n=document.getElementById('notif');
+  n.textContent=msg;n.classList.add('show');
+  setTimeout(()=>n.classList.remove('show'),2800);
+}
+function submitContact(){
+  if(!g('c-n')||!g('c-e')||!g('c-m')){notif('❌ Please fill all fields');return;}
+  notif('✅ Message received! Thank you.');
+  ['c-n','c-e','c-m'].forEach(id=>document.getElementById(id).value='');
+}
+
+// ─── START ───────────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>
