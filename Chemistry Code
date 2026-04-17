@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Kmistry4all - Chemistry Loves You | Free Notes, Apps & Experiments</title>
-  <meta name="description" content="Kmistry4all.com: Free chemistry notes, interactive apps, experiment videos, and documents. Learn chemistry with fun, safe, and copyright-free resources for students & teachers.">
+  <meta name="description" content="Kmistry4all.online: Free chemistry notes, interactive apps, experiment videos, and documents. Learn chemistry with fun, safe, and copyright-free resources for students & teachers.">
   <meta name="keywords" content="chemistry notes, free chemistry apps, experiment videos, periodic table, molar mass calculator, chemistry for all, Kmistry4all">
   <meta name="author" content="Kmistry4all Team">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.kmistry4all.com">
+  <link rel="canonical" href="https://www.kmistry4all.online">
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="Kmistry4all - Free Chemistry Hub">
   <meta property="og:description" content="Interactive chemistry notes, experiments, videos, and tools. Totally free and no copyright issues.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.kmistry4all.com">
+  <meta property="og:url" content="https://www.kmistry4all.online">
   <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Kmistry4all">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Schema.org for educational website -->
@@ -22,7 +22,7 @@
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "Kmistry4all",
-    "url": "https://www.kmistry4all.com",
+    "url": "https://www.kmistry4all.online",
     "description": "Free chemistry resources, experiments, apps, and video tutorials for everyone.",
     "sameAs": []
   }
